@@ -30,15 +30,10 @@ nav ul {
 }
 
 nav ul li a {
-  text-decoration: none; /* Ensures no underline on regular state */
+  text-decoration: none;
   font-size: 16px;
   color: #00b4b4;
   transition: color 0.3s ease;
-}
-
-nav ul li a:visited {
-  /* Ensures no underline on visited state */
-  text-decoration: none;
 }
 
 nav ul li.active a,
@@ -56,10 +51,9 @@ nav ul li a:hover {
 }
 
 .hero {
-  background-image: url("../images/hohero.jpg");
   background-size: cover;
   background-position: center;
-  height: 300px;
+  height: 0;
   position: relative;
   display: flex;
   justify-content: center;
@@ -111,7 +105,7 @@ nav ul li a:hover {
   padding: 0 20px;
 }
 
-.events-heading {
+.contact-heading {
   font-size: 24px;
   font-weight: normal;
   margin-bottom: 40px;
@@ -120,75 +114,64 @@ nav ul li a:hover {
   padding-left: 10px;
 }
 
-.main-event-image {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.main-event-image img {
-  width: 100%;
-  max-width: 900px;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-.events-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-}
-
-.event-card {
+.contact-section {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
   align-items: flex-start;
 }
 
-.event-date {
-  background-color: #f95216;
-  color: rgba(0, 0, 0, 0.943);
-  padding: 10px 15px;
-  text-align: center;
+.contact-image img {
+  width: 400px;
+  height: auto;
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.contact-form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  font-size: 18px;
-  flex-shrink: 0;
+  gap: 20px;
+  width: 400px;
+  max-width: 100%;
 }
 
-.event-date .month {
-  font-size: 14px;
-  margin-bottom: 2px;
-}
-
-.event-date .day {
-  font-size: 24px;
-}
-
-.event-details {
-  text-align: left;
-}
-
-.event-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #f0f0f0;
   color: #333;
 }
 
-.event-description {
-  font-size: 14px;
-  color: #666;
-  line-height: 1.5;
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
 }
 
-@media (max-width: 768px) {
-  .events-grid {
-    grid-template-columns: 1fr;
-  }
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #999;
+}
+
+.submit-button {
+  padding: 12px 25px;
+  background-color: #00b4b4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  align-self: flex-start;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #009988;
 }
 
 footer {
@@ -250,20 +233,4 @@ form button {
 .socials i:hover {
   background-color: white;
   color: #007c8a;
-}
-
-a.event-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-}
-
-a.event-link:visited {
-  text-decoration: none;
-  color: inherit;
-}
-
-a.event-link:hover {
-  text-decoration: none;
-  color: inherit;
 }

@@ -30,14 +30,13 @@ nav ul {
 }
 
 nav ul li a {
-  text-decoration: none; /* Ensures no underline on regular state */
+  text-decoration: none;
   font-size: 16px;
   color: #00b4b4;
   transition: color 0.3s ease;
 }
 
 nav ul li a:visited {
-  /* Ensures no underline on visited state */
   text-decoration: none;
 }
 
